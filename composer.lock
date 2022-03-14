@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15e75996c397a8062e077930886b1872",
+    "content-hash": "ce7e9b7bdfa70d243930146182e5d1eb",
     "packages": [
         {
             "name": "evokelektrique/virgool",
-            "version": "v0.3",
+            "version": "v0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/evokelektrique/virgool-php.git",
@@ -44,7 +44,7 @@
             ],
             "support": {
                 "issues": "https://github.com/evokelektrique/virgool-php/issues",
-                "source": "https://github.com/evokelektrique/virgool-php/tree/v0.3"
+                "source": "https://github.com/evokelektrique/virgool-php/tree/v0.3.1"
             },
             "time": "2022-03-14T20:23:55+00:00"
         },

@@ -1,3 +1,10 @@
+<div id="wp_virgool_wrapper">
 {{#posts}}
-	<b>Title: {{title}}</b> <br>
+	<div class="wp_virgool_post">
+		<img src="{{#image}}{{.}}{{/image}}">
+		<b>{{title}}</b> -
+		<time>{{metadata.0}}</time> -
+		<span>{{metadata.1}}</span>
+	</div>
 {{/posts}}
+</div>

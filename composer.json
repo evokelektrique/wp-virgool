@@ -4,7 +4,7 @@
         "yoast/phpunit-polyfills": "^1.0"
     },
     "require": {
-        "evokelektrique/virgool": "^0.3.0",
+        "evokelektrique/virgool": "^0.3.1",
         "mustache/mustache": "^2.14"
     }
 }
