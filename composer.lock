@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc15a9a216e0ab835a9bc806a05d5406",
+    "content-hash": "15e75996c397a8062e077930886b1872",
     "packages": [
         {
             "name": "evokelektrique/virgool",
-            "version": "v0.2",
+            "version": "v0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/evokelektrique/virgool-php.git",
-                "reference": "fc006bde80f7c9a1f6509089538b663e6932c3bf"
+                "reference": "b73d0eb5dd6f75363e9fe6e0f55053f33796f876"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/evokelektrique/virgool-php/zipball/fc006bde80f7c9a1f6509089538b663e6932c3bf",
-                "reference": "fc006bde80f7c9a1f6509089538b663e6932c3bf",
+                "url": "https://api.github.com/repos/evokelektrique/virgool-php/zipball/b73d0eb5dd6f75363e9fe6e0f55053f33796f876",
+                "reference": "b73d0eb5dd6f75363e9fe6e0f55053f33796f876",
                 "shasum": ""
             },
             "require": {
@@ -44,9 +44,9 @@
             ],
             "support": {
                 "issues": "https://github.com/evokelektrique/virgool-php/issues",
-                "source": "https://github.com/evokelektrique/virgool-php/tree/v0.2"
+                "source": "https://github.com/evokelektrique/virgool-php/tree/v0.3"
             },
-            "time": "2022-03-11T12:38:39+00:00"
+            "time": "2022-03-14T20:23:55+00:00"
         },
         {
             "name": "fabpot/goutte",
