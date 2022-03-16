@@ -1,10 +1,19 @@
 <div id="wp_virgool_wrapper">
 {{#posts}}
 	<div class="wp_virgool_post">
-		<img src="{{#image}}{{.}}{{/image}}">
-		<b>{{title}}</b> -
-		<time>{{metadata.0}}</time> -
-		<span>{{metadata.1}}</span>
+		<a href="{{url}}">
+			<div class="image_side">
+				<img src="{{#image}}{{.}}{{/image}}" alt="{{summary}}">
+			</div>
+			<div class="sides">
+				<p class="virgool_title" title="{{title}}">{{title}}</p>
+				<div class="virgool_meta">
+					<time>{{metadata.0}}</time>
+					&nbsp;&bull;&nbsp;
+					<span>{{metadata.1}}</span>
+				</div>
+			</div>
+		</a>
 	</div>
 {{/posts}}
 </div>

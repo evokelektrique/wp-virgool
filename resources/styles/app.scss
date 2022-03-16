@@ -1,0 +1,56 @@
+#wp_virgool_wrapper {
+	font-family: inherit;
+	border-radius: 5px;
+	border: 1px solid #dedede;
+	padding: 10px;
+	direction: rtl;
+
+	.wp_virgool_post {
+		margin-bottom: 20px;
+	}
+
+	a {
+		text-decoration: none;
+		display: flex;
+		flex-direction: row;
+		transition: all .2s ease;
+
+		&:hover,
+		&:active {
+			color: blue;
+		}
+	}
+
+	img {
+		border-radius: 5px;
+		width: 90px;
+		vertical-align: top;
+	}
+
+	.image_side {
+		width: 90px;
+		margin-left: 10px;
+	}
+
+	p {
+		margin: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	.virgool_meta {
+		font-size: 12px;
+		color: grey;
+	}
+
+	.sides {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		overflow: hidden;
+		justify-content: space-between;
+	}
+}

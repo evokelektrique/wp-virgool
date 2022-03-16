@@ -6,11 +6,14 @@
   "scripts": {
     "start": "grunt default",
     "readme": "grunt readme",
-    "i18n": "grunt i18n"
+    "i18n": "grunt i18n",
+    "watch": "node-sass ./resources/styles/app.scss ./dist/app.css --watch --source-map true --source-map-contents sass",
+    "compile": "node-sass ./resources/styles/app.scss ./dist/app.css --output-style compressed"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-wp-i18n": "~0.5.0",
-    "grunt-wp-readme-to-markdown": "~1.0.0"
+    "grunt-wp-readme-to-markdown": "~1.0.0",
+    "sass": "^1.49.9"
   }
 }

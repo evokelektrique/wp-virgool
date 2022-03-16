@@ -25,8 +25,11 @@ class WP_Virgool {
 
 	public function __construct() {
 		$this->username = "virgool";
-		$this->cache = null;
 		$this->virgool_client = new Virgool($this->username);
+		$this->cache = [
+			"expire" => 2, // Hours
+			"key" => "virgool_posts",
+		];
 
 		$this->setup_hooks();
 	}
@@ -40,13 +43,19 @@ class WP_Virgool {
 	}
 
 	public function get_posts(): array {
-		$posts = $this->virgool_client->get_posts();
+		$posts = get_transient($this->cache["key"]);
+
+		if($posts === false) {
+			$posts = $this->virgool_client->get_posts();
+			set_transient($this->cache["key"], $posts, $this->cache["expire"] * 60 * 60);
+		}
 
 		return $posts;
 	}
 
-	public function get_content(string $mode): string {
+	public function get_content(string $mode, int $limit): string {
 		$posts = $this->get_posts();
+		$posts = array_slice($posts, 0, $limit);
 		$path = plugin_dir_path(__FILE__);
 		$file = file_get_contents("{$path}templates/{$mode}.mustache");
 
@@ -58,14 +67,20 @@ class WP_Virgool {
 	}
 
 	protected function setup_hooks() {
+		// Virgool shortcode
 		add_shortcode('wp_virgool', function($args, $content = null) {
 			global $wp_virgool;
 
+			$limit = $args["limit"] ?? 5;
 			$mode = "light";
-			$content = $wp_virgool->get_content($mode);
+			$content = $wp_virgool->get_content($mode, $limit);
 
 		    return $content;
 		});
+
+		// Load styles
+		$application_css = plugin_dir_url( __FILE__ ) . 'dist/app.css';
+		wp_enqueue_style('virgool-styles', $application_css, array(), null, false);
 	}
 
 }
