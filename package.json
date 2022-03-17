@@ -8,7 +8,7 @@
     "readme": "grunt readme",
     "i18n": "grunt i18n",
     "watch": "node-sass ./resources/styles/app.scss ./dist/app.css --watch --source-map true --source-map-contents sass",
-    "compile": "node-sass ./resources/styles/app.scss ./dist/app.css --output-style compressed"
+    "compile": "node-sass ./resources/styles/app.scss ./dist/app.css --source-map true --output-style compressed"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

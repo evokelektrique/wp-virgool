@@ -1,8 +1,18 @@
+$font-family: inherit;
+
+$grey-color: #dedede;
+$blue-color: blue;
+
+$image-width: 90px;
+$wrapper-padding: 10px;
+$title-font-size: 14px;
+$meta-font-size: 12px;
+
 #wp_virgool_wrapper {
-	font-family: inherit;
+	font-family: $font-family;
 	border-radius: 5px;
-	border: 1px solid #dedede;
-	padding: 10px;
+	border: 1px solid $grey-color;
+	padding: $wrapper-padding;
 	direction: rtl;
 
 	.wp_virgool_post {
@@ -17,18 +27,18 @@
 
 		&:hover,
 		&:active {
-			color: blue;
+			color: $blue-color;
 		}
 	}
 
 	img {
 		border-radius: 5px;
-		width: 90px;
+		width: $image-width;
 		vertical-align: top;
 	}
 
 	.image_side {
-		width: 90px;
+		width: $image-width;
 		margin-left: 10px;
 	}
 
@@ -38,12 +48,12 @@
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		font-weight: bold;
-		font-size: 14px;
+		font-size: $title-font-size;
 	}
 
 	.virgool_meta {
-		font-size: 12px;
-		color: grey;
+		font-size: $meta-font-size;
+		color: $grey-color;
 	}
 
 	.sides {
