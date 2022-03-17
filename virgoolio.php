@@ -1,22 +1,22 @@
 <?php
 /**
- * Plugin Name:     Wp Virgool
- * Plugin URI:      https://github.com/evokelektrique/wp-virgool/
+ * Plugin Name:     Virgoolio
+ * Plugin URI:      https://github.com/evokelektrique/virgool/
  * Description:     Display your virgool.io posts in your WordPress websites
  * Author:          EVOKE
  * Author URI:      https://github.com/evokelektrique/
- * Text Domain:     wp-virgool
+ * Text Domain:     virgool
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.2.0
  *
- * @package         Wp_Virgool
+ * @package         Virgool Plugin
  */
 
 require_once __DIR__ . "/vendor/autoload.php";
 
 use Virgoolio\Virgool;
 
-class WP_Virgool {
+class Virgool_WP {
 
 	private static $instance;
 	private $virgool_client;
@@ -34,7 +34,7 @@ class WP_Virgool {
 
 	public static function get_instance() {
 		if(!isset(self::$instance)) {
-			self::$instance = new WP_Virgool();
+			self::$instance = new Virgool_WP();
 		}
 
 		return self::$instance;
@@ -65,9 +65,9 @@ class WP_Virgool {
 	}
 
 	protected function setup_hooks() {
-		// Virgool shortcode
+		// Virgool Plugin shortcode
 		add_shortcode('wp_virgool', function($args, $content = null) {
-			global $wp_virgool;
+			global $virgool_wp;
 			$this->username = $args["user"] ?? false;
 
 			if(!$this->username) {
@@ -78,7 +78,7 @@ class WP_Virgool {
 
 			$limit = $args["limit"] ?? 5;
 			$mode = "light";
-			$content = $wp_virgool->get_content($mode, $limit);
+			$content = $virgool_wp->get_content($mode, $limit);
 
 		    return $content;
 		});
@@ -90,4 +90,4 @@ class WP_Virgool {
 
 }
 
-$GLOBALS['wp_virgool'] = WP_Virgool::get_instance();
+$GLOBALS['virgool_wp'] = Virgool_WP::get_instance();

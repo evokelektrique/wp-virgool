@@ -1,6 +1,6 @@
-# Wp Virgool #
+# Virgool Plugin WordPress #
 **Contributors:** evokelektrique  
-**Tags:** Shortcut, Virgool, Embbeded posts  
+**Tags:** Shortcut, Virgool Plugin, Embbeded posts
 **Requires at least:** 4.5  
 **Tested up to:** 5.9.2  
 **Requires PHP:** 5.6  
@@ -13,21 +13,21 @@ Display your virgool.io posts in your WordPress websites
 ## Description ##
 
 Display your virgool.io posts in your WordPress websites
-
+``
 ## Installation ##
 
 This section describes how to install the plugin and get it working.
 
-1. Upload `wp-virgool` to the `/wp-content/plugins/` directory
+1. Upload `virgool` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 Or easily install it through searching the plugin name in 'Plugins' menu.
 
 ## Frequently Asked Questions ##
 
-### Will Wp Virgool effect on my website load time? ###
+### Will Virgool Plugin WordPress effect on my website load time? ###
 
-No, Wp Virgool alawys cache the results.
+No, Virgool Plugin WordPress alawys cache the results.
 
 ### How can I use the shortcut? ###
 
@@ -40,7 +40,7 @@ Easily like other shortcuts you would use in your editor, for example: `[wp_virg
 ## Screenshots ##
 
 ### 1. Posts ###
-![Posts](http://ps.w.org/wp-virgool/assets/screenshot-1.png)
+![Posts](http://ps.w.org/virgool/assets/screenshot-1.png)
 
 
 ## Changelog ##
