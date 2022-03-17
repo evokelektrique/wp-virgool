@@ -24,8 +24,6 @@ class WP_Virgool {
 	private $username;
 
 	public function __construct() {
-		$this->username = "virgool";
-		$this->virgool_client = new Virgool($this->username);
 		$this->cache = [
 			"expire" => 2, // Hours
 			"key" => "virgool_posts",
@@ -43,7 +41,7 @@ class WP_Virgool {
 	}
 
 	public function get_posts(): array {
-		$posts = get_transient($this->cache["key"]);
+		$posts = get_transient($this->cache["key"] . $this->username);
 
 		if($posts === false) {
 			$posts = $this->virgool_client->get_posts();
@@ -70,6 +68,13 @@ class WP_Virgool {
 		// Virgool shortcode
 		add_shortcode('wp_virgool', function($args, $content = null) {
 			global $wp_virgool;
+			$this->username = $args["user"] ?? false;
+
+			if(!$this->username) {
+				return false;
+			}
+
+			$this->virgool_client = new Virgool($this->username);
 
 			$limit = $args["limit"] ?? 5;
 			$mode = "light";
