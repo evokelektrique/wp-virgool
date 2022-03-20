@@ -40,7 +40,7 @@ Easily like other shortcuts you would use in your editor, for example: `[wp_virg
 ## Screenshots ##
 
 ### 1. Posts ###
-![Posts](http://ps.w.org/virgool/assets/screenshot-1.png)
+![Posts](./assets/screenshot-1.png)
 
 
 ## Changelog ##
